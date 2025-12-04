@@ -42,6 +42,17 @@
 
             tapping-term-ms = <100>;
         };
+
+        qwerty_holds: qwerty_holds {
+            compatible = "zmk,behavior-hold-tap";
+            label = "QWERTY_HOLDS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <13>;
+        };
     };
 
     keymap {
@@ -58,11 +69,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&mt GRAVE ESCAPE  &mt EXCL NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT N5                                                                                    &mt CARET NUMBER_6  &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &kp GRAVE
-&kp TAB           &mt NUMBER_1 Q     &mt NUMBER_2 W        &mt NUMBER_3 E     &mt NUMBER_4 R       &mt N5 T                                                                                          &mt NUMBER_6 Y      &mt N7 U          &mt N8 I         &mt N9 O                 &mt MINUS P               &mt UNDERSCORE MINUS
-&kp LCTRL         &kp A              &kp S                 &kp D              &kp F                &kp G                                                                                             &kp H               &kp J             &kp K            &kp L                    &kp SEMI                  &kp SQT
-&kp LSHFT         &kp Z              &kp X                 &kp C              &kp V                &kp B           &mt LG(LS(LEFT_BRACKET)) LEFT_BRACKET    &mt LG(LS(RIGHT_BRACKET)) RIGHT_BRACKET  &kp N               &kp M             &kp COMMA        &kp DOT                  &kp FSLH                  &kp RSHFT
-                                                           &kp LALT           &kp LGUI             &mo 1           &kp SPACE                                &kp RET                                  &mo 2               &kp BSPC          &kp RGUI
+&qwerty_holds GRAVE ESCAPE  &qwerty_holds EXCL NUMBER_1  &qwerty_holds AT_SIGN NUMBER_2  &qwerty_holds HASH NUMBER_3  &qwerty_holds DOLLAR NUMBER_4  &qwerty_holds PERCENT N5                                                                                    &qwerty_holds CARET NUMBER_6  &qwerty_holds AMPERSAND N7  &qwerty_holds ASTERISK N8  &qwerty_holds LEFT_PARENTHESIS N9  &qwerty_holds RIGHT_PARENTHESIS N0  &kp GRAVE
+&kp TAB                     &qwerty_holds NUMBER_1 Q     &qwerty_holds NUMBER_2 W        &qwerty_holds NUMBER_3 E     &qwerty_holds NUMBER_4 R       &qwerty_holds N5 T                                                                                          &qwerty_holds NUMBER_6 Y      &qwerty_holds N7 U          &qwerty_holds N8 I         &qwerty_holds N9 O                 &qwerty_holds MINUS P               &qwerty_holds UNDERSCORE MINUS
+&kp LCTRL                   &kp A                        &kp S                           &kp D                        &kp F                          &kp G                                                                                                       &kp H                         &kp J                       &kp K                      &kp L                              &kp SEMI                            &kp SQT
+&kp LSHFT                   &kp Z                        &kp X                           &kp C                        &kp V                          &kp B                     &mt LG(LS(LEFT_BRACKET)) LEFT_BRACKET    &mt LG(LS(RIGHT_BRACKET)) RIGHT_BRACKET  &kp N                         &kp M                       &kp COMMA                  &kp DOT                            &kp FSLH                            &kp RSHFT
+                                                                                         &kp LALT                     &kp LGUI                       &mo 1                     &kp SPACE                                &kp RET                                  &mo 2                         &kp BSPC                    &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -79,10 +90,10 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                                            &trans     &trans     &trans          &trans    &trans    &trans
-&kp F1      &kp F2            &kp F3             &kp F4             &kp F5             &kp F6                                                                  &kp F7     &kp F8     &kp F9          &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR         &kp PRCNT                                                               &kp CARET  &kp AMPS   &kp ASTRK       &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(LS(LEFT_BRACKET))    &kp LG(LS(RIGHT_BRACKET))  &trans     &kp MINUS  &mt PLUS EQUAL  &kp LBRC  &kp RBRC  &kp PIPE
+&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4                                                            &trans     &trans     &trans          &trans            &trans             &trans
+&kp F1      &kp F2            &kp F3             &kp F4             &kp F5             &kp F6                                                                  &kp F7     &kp F8     &kp F9          &kp F10           &kp F11            &kp F12
+&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR         &kp PRCNT                                                               &kp CARET  &kp AMPS   &kp ASTRK       &kp LPAR          &kp RPAR           &kp TILDE
+&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(LS(LEFT_BRACKET))    &kp LG(LS(RIGHT_BRACKET))  &trans     &kp MINUS  &mt PLUS EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE
                                                  &trans             &trans             &trans           &trans                      &trans                     &trans     &trans     &trans
             >;
 
