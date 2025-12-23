@@ -20,9 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    # shield: lily58_left nice_view_adapter nice_view
     shield: lily58_left nice_view_adapter nice-view-gem
   - board: nice_nano_v2
-    # shield: lily58_right nice_view_adapter nice_view
-    # attempting to add right side build
     shield: lily58_right nice_view_adapter nice-view-gem
