@@ -69,11 +69,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&none                     &none                     &none                     &none                     &none                     &none                                                                                                 &none                     &none               &none               &none               &none                     &none
-&qwerty_holds ESCAPE TAB  &qwerty_holds NUMBER_1 Q  &qwerty_holds NUMBER_2 W  &qwerty_holds NUMBER_3 E  &qwerty_holds NUMBER_4 R  &qwerty_holds N5 T                                                                                    &qwerty_holds NUMBER_6 Y  &qwerty_holds N7 U  &qwerty_holds N8 I  &qwerty_holds N9 O  &qwerty_holds NUMBER_0 P  &qwerty_holds GRAVE MINUS
-&kp LCTRL                 &kp A                     &kp S                     &kp D                     &kp F                     &kp G                                                                                                 &kp H                     &kp J               &kp K               &kp L               &kp SEMI                  &kp SQT
-&kp LSHFT                 &kp Z                     &kp X                     &qwerty_holds LG(C) C     &qwerty_holds LG(V) V     &kp B               &mt LG(LS(LEFT_BRACKET)) LEFT_BRACKET    &mt LG(LS(RIGHT_BRACKET)) RIGHT_BRACKET  &kp N                     &kp M               &kp COMMA           &kp DOT             &kp FSLH                  &kp RSHFT
-                                                                              &kp LALT                  &kp LGUI                  &mo 1               &kp SPACE                                &kp RET                                  &mo 2                     &kp BSPC            &kp RGUI
+&qwerty_holds GRAVE ESCAPE  &kp NUMBER_1              &kp NUMBER_2              &kp NUMBER_3              &kp NUMBER_4              &kp N5                                                                                                &kp NUMBER_6              &kp N7              &kp N8              &kp N9              &kp N0                    &kp EQUAL
+&qwerty_holds ESCAPE TAB    &qwerty_holds NUMBER_1 Q  &qwerty_holds NUMBER_2 W  &qwerty_holds NUMBER_3 E  &qwerty_holds NUMBER_4 R  &qwerty_holds N5 T                                                                                    &qwerty_holds NUMBER_6 Y  &qwerty_holds N7 U  &qwerty_holds N8 I  &qwerty_holds N9 O  &qwerty_holds NUMBER_0 P  &qwerty_holds GRAVE MINUS
+&kp LCTRL                   &kp A                     &kp S                     &kp D                     &kp F                     &kp G                                                                                                 &kp H                     &kp J               &kp K               &kp L               &kp SEMI                  &kp SQT
+&kp LSHFT                   &kp Z                     &kp X                     &qwerty_holds LG(C) C     &qwerty_holds LG(V) V     &kp B               &mt LG(LS(LEFT_BRACKET)) LEFT_BRACKET    &mt LG(LS(RIGHT_BRACKET)) RIGHT_BRACKET  &kp N                     &kp M               &kp COMMA           &kp DOT             &kp FSLH                  &kp RSHFT
+                                                                                &kp LALT                  &kp LGUI                  &mo 1               &kp SPACE                                &kp RET                                  &mo 2                     &kp BSPC            &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -113,8 +113,8 @@
             bindings = <
 &trans     &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans     &trans           &trans    &trans
 &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6          &kp N7          &kp N8     &kp N9           &kp N0    &kp GRAVE
-&trans     &trans  &trans  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP     &kp RIGHT_ARROW  &trans    &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_PLUS     &kp MINUS       &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH
+&trans     &trans  &trans  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP     &kp RIGHT_ARROW  &trans    &kp NON_US_BACKSLASH
+&trans     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_PLUS     &kp MINUS       &kp EQUAL  &kp LBKT         &kp RBKT  &trans
                            &trans  &trans  &trans  &trans    &trans  &trans          &trans          &mo 3
             >;
 
