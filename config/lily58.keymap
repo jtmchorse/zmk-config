@@ -37,6 +37,11 @@
             bindings = <&studio_unlock>;
             key-positions = <0 11>;
         };
+
+        combo_return {
+            bindings = <&kp RETURN>;
+            key-positions = <28 29>;
+        };
     };
 
     behaviors {
@@ -84,11 +89,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&qwerty_holds GRAVE ESCAPE           &qwerty_holds EXCLAMATION NUMBER_1  &qwerty_holds AT_SIGN NUMBER_2  &qwerty_holds HASH NUMBER_3  &qwerty_holds DOLLAR NUMBER_4  &qwerty_holds PERCENT N5                                         &qwerty_holds CARET NUMBER_6        &qwerty_holds AMPERSAND N7     &qwerty_holds ASTERISK N8  &qwerty_holds LEFT_PARENTHESIS N9    &qwerty_holds RIGHT_PARENTHESIS N0  &qwerty_holds PLUS EQUAL
-&qwerty_holds LA(LC(LG(QMARK))) TAB  &qwerty_holds NUMBER_1 Q            &qwerty_holds NUMBER_2 W        &qwerty_holds NUMBER_3 E     &qwerty_holds NUMBER_4 R       &qwerty_holds N5 T                                               &qwerty_holds NUMBER_6 Y            &qwerty_holds N7 U             &qwerty_holds N8 I         &qwerty_holds N9 O                   &qwerty_holds NUMBER_0 P            &qwerty_holds GRAVE MINUS
-&kp LCTRL                            &kp A                               &kp S                           &kp D                        &kp F                          &kp G                                                            &qwerty_holds LA(LG(LEFT_ARROW)) H  &qwerty_holds LC(LA(LG(V))) J  &qwerty_holds LG(LA(F)) K  &qwerty_holds LG(LA(RIGHT_ARROW)) L  &kp SEMI                            &kp SQT
-&kp LSHFT                            &qwerty_holds LG(Z) Z               &qwerty_holds LG(X) X           &qwerty_holds LG(C) C        &qwerty_holds LG(V) V          &kp B                     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N                               &kp M                          &kp COMMA                  &kp DOT                              &kp FSLH                            &kp RSHFT
-                                                                                                         &kp LALT                     &kp LGUI                       &mo 1                     &kp SPACE           &kp RET            &mo 2                               &kp BSPC                       &kp RGUI
+&qwerty_holds GRAVE ESCAPE           &qwerty_holds EXCLAMATION NUMBER_1  &qwerty_holds AT_SIGN NUMBER_2  &qwerty_holds HASH NUMBER_3  &qwerty_holds DOLLAR NUMBER_4  &qwerty_holds PERCENT N5                                         &qwerty_holds CARET NUMBER_6        &qwerty_holds AMPERSAND N7  &qwerty_holds ASTERISK N8  &qwerty_holds LEFT_PARENTHESIS N9    &qwerty_holds RIGHT_PARENTHESIS N0  &qwerty_holds PLUS EQUAL
+&qwerty_holds LA(LC(LG(QMARK))) TAB  &qwerty_holds NUMBER_1 Q            &qwerty_holds NUMBER_2 W        &qwerty_holds NUMBER_3 E     &qwerty_holds NUMBER_4 R       &qwerty_holds N5 T                                               &qwerty_holds NUMBER_6 Y            &qwerty_holds N7 U          &qwerty_holds N8 I         &qwerty_holds N9 O                   &qwerty_holds NUMBER_0 P            &qwerty_holds GRAVE MINUS
+&kp LCTRL                            &kp A                               &kp S                           &kp D                        &kp F                          &kp G                                                            &qwerty_holds LA(LG(LEFT_ARROW)) H  &qwerty_holds LC(LA(R)) J   &qwerty_holds LG(LA(F)) K  &qwerty_holds LG(LA(RIGHT_ARROW)) L  &kp SEMI                            &kp SQT
+&kp LSHFT                            &qwerty_holds LG(Z) Z               &qwerty_holds LG(X) X           &qwerty_holds LG(C) C        &qwerty_holds LG(V) V          &kp B                     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N                               &kp M                       &kp COMMA                  &kp DOT                              &kp FSLH                            &kp RSHFT
+                                                                                                         &kp LALT                     &kp LGUI                       &mo 1                     &kp SPACE           &kp RET            &mo 2                               &kp BSPC                    &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -136,7 +141,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        layer_3 {
+        Super_Layer {
             bindings = <
 &trans          &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
