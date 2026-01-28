@@ -42,6 +42,16 @@
             bindings = <&kp RETURN>;
             key-positions = <28 29>;
         };
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <31 32>;  // J+K on right home row
+        };
+
+        combo_delword {
+            bindings = <&kp LA(BSPC)>;
+            key-positions = <46 47>;  // comma+period for delete word
+        };
     };
 
     behaviors {
