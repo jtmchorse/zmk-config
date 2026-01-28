@@ -15,9 +15,9 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: nice-view-gem 
-      remote: m165437 
-      revision: main          
+    - name: nice-view-gem
+      remote: m165437
+      revision: 7794ebf  # Pin to pre-Zephyr 4.1 version          
     - name: hammerbeam-slideshow          #new entry
       remote: gpeye                       #new entry
       revision: main                      #new entry               
