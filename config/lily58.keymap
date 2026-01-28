@@ -10,6 +10,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        updir: updir {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DOT &kp FSLH>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -51,6 +59,41 @@
         combo_delword {
             bindings = <&kp LA(BSPC)>;
             key-positions = <46 47>;  // comma+period for delete word
+        };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <27 28>;  // D+F
+        };
+
+        combo_undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <37 38>;  // Z+X
+        };
+
+        combo_copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <38 39>;  // X+C
+        };
+
+        combo_paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <39 40>;  // C+V
+        };
+
+        combo_updir {
+            bindings = <&updir>;
+            key-positions = <19 20>;  // U+I types ../
+        };
+
+        combo_selall {
+            bindings = <&kp LG(A)>;
+            key-positions = <25 26>;  // A+S
+        };
+
+        combo_save {
+            bindings = <&kp LG(S)>;
+            key-positions = <26 27>;  // S+D
         };
     };
 
