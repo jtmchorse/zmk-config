@@ -16,6 +16,60 @@
             #binding-cells = <0>;
             bindings = <&kp DOT &kp DOT &kp FSLH>;
         };
+
+        paren_pair: paren_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+        };
+
+        bracket_pair: bracket_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+        };
+
+        brace_pair: brace_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+        };
+
+        fat_arrow: fat_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT>;
+        };
+
+        thin_arrow: thin_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+        };
+
+        m_the: m_the {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp H &kp E &kp SPACE>;
+        };
+
+        pipe_op: pipe_op {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE &kp GT>;
+        };
+
+        not_equal: not_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL &kp EQUAL>;
+        };
+
+        triple_eq: triple_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp EQUAL &kp EQUAL>;
+        };
     };
 
     combos {
@@ -94,6 +148,72 @@
         combo_save {
             bindings = <&kp LG(S)>;
             key-positions = <26 27>;  // S+D
+        };
+
+        // Bracket pairs with cursor inside
+        combo_parens {
+            bindings = <&paren_pair>;
+            key-positions = <19 31>;  // U+J vertical
+        };
+
+        combo_brackets {
+            bindings = <&bracket_pair>;
+            key-positions = <20 32>;  // I+K vertical
+        };
+
+        combo_braces {
+            bindings = <&brace_pair>;
+            key-positions = <21 33>;  // O+L vertical
+        };
+
+        // Programming operators
+        combo_fat_arrow {
+            bindings = <&fat_arrow>;
+            key-positions = <33 34>;  // L+;  types =>
+        };
+
+        combo_thin_arrow {
+            bindings = <&thin_arrow>;
+            key-positions = <34 35>;  // ;+'  types ->
+        };
+
+        combo_pipe {
+            bindings = <&pipe_op>;
+            key-positions = <32 33>;  // K+L  types |>
+        };
+
+        combo_neq {
+            bindings = <&not_equal>;
+            key-positions = <7 8>;  // 7+8  types !=
+        };
+
+        combo_triple_eq {
+            bindings = <&triple_eq>;
+            key-positions = <8 9>;  // 8+9  types ===
+        };
+
+        // Caps word - both shifts
+        combo_capsword {
+            bindings = <&caps_word>;
+            key-positions = <36 49>;  // LSHFT+RSHFT
+        };
+
+        // "the " macro
+        combo_the {
+            bindings = <&m_the>;
+            key-positions = <17 29>;  // T+G
+        };
+
+        // Screenshot to clipboard (macOS)
+        combo_screenshot {
+            bindings = <&kp LG(LC(LS(N4)))>;
+            key-positions = <1 2>;  // 1+2 on number row
+        };
+
+        // Delete word forward
+        combo_delword_fwd {
+            bindings = <&kp LA(DELETE)>;
+            key-positions = <47 48>;  // .+/
         };
     };
 
