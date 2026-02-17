@@ -240,7 +240,7 @@ combos:
 - p: [42, 53]
   k: Sft+Gui+Ctl+4
 - p: [43, 54]
-  k: Sft+Gui+4
+  k: Sft+Gui+5
 - p: [42, 29]
   k: Gui+Sft+[
 - p: [43, 30]
@@ -253,20 +253,6 @@ combos:
   k: ESC
 - p: [46, 47]
   k: Alt+BSPC
-- p: [27, 28]
-  k: TAB
-- p: [37, 38]
-  k: Gui+Z
-- p: [38, 39]
-  k: Gui+C
-- p: [39, 40]
-  k: Gui+V
-- p: [19, 20]
-  k: '&updir'
-- p: [25, 26]
-  k: Gui+A
-- p: [26, 27]
-  k: Gui+S
 - p: [19, 31]
   k: '&paren_pair'
 - p: [20, 32]
@@ -279,15 +265,7 @@ combos:
   k: '&thin_arrow'
 - p: [32, 33]
   k: '&pipe_op'
-- p: [7, 8]
-  k: '&not_equal'
-- p: [8, 9]
-  k: '&triple_eq'
 - p: [36, 49]
   k: '&caps_word'
-- p: [17, 29]
-  k: '&m_the'
-- p: [1, 2]
-  k: Gui+Ctl+Sft+4
 - p: [47, 48]
   k: Alt+DELETE
