@@ -80,8 +80,8 @@
             key-positions = <42 53>;
         };
 
-        tab_back {
-            bindings = <&kp LS(LG(NUMBER_4))>;
+        screenshot_record {
+            bindings = <&kp LS(LG(NUMBER_5))>;
             key-positions = <43 54>;
         };
 
@@ -115,40 +115,7 @@
             key-positions = <46 47>;  // comma+period for delete word
         };
 
-        combo_tab {
-            bindings = <&kp TAB>;
-            key-positions = <27 28>;  // D+F
-        };
 
-        combo_undo {
-            bindings = <&kp LG(Z)>;
-            key-positions = <37 38>;  // Z+X
-        };
-
-        combo_copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <38 39>;  // X+C
-        };
-
-        combo_paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <39 40>;  // C+V
-        };
-
-        combo_updir {
-            bindings = <&updir>;
-            key-positions = <19 20>;  // U+I types ../
-        };
-
-        combo_selall {
-            bindings = <&kp LG(A)>;
-            key-positions = <25 26>;  // A+S
-        };
-
-        combo_save {
-            bindings = <&kp LG(S)>;
-            key-positions = <26 27>;  // S+D
-        };
 
         // Bracket pairs with cursor inside
         combo_parens {
@@ -182,15 +149,6 @@
             key-positions = <32 33>;  // K+L  types |>
         };
 
-        combo_neq {
-            bindings = <&not_equal>;
-            key-positions = <7 8>;  // 7+8  types !=
-        };
-
-        combo_triple_eq {
-            bindings = <&triple_eq>;
-            key-positions = <8 9>;  // 8+9  types ===
-        };
 
         // Caps word - both shifts
         combo_capsword {
@@ -198,17 +156,6 @@
             key-positions = <36 49>;  // LSHFT+RSHFT
         };
 
-        // "the " macro
-        combo_the {
-            bindings = <&m_the>;
-            key-positions = <17 29>;  // T+G
-        };
-
-        // Screenshot to clipboard (macOS)
-        combo_screenshot {
-            bindings = <&kp LG(LC(LS(N4)))>;
-            key-positions = <1 2>;  // 1+2 on number row
-        };
 
         // Delete word forward
         combo_delword_fwd {
