@@ -164,25 +164,16 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
     behaviors {
-        browserTabRight: browserTabRight {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BROWSERTABRIGHT";
-            #binding-cells = <0>;
-            bindings = <&none>, <&kp LG(LS(RIGHT_BRACKET))>;
-
-            tapping-term-ms = <100>;
-        };
-
-        browserTabLeft: browserTabLeft {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BROWSERTABLEFT";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&kp LG(LS(LEFT_BRACKET))>;
-
-            tapping-term-ms = <100>;
-        };
-
         qwerty_holds: qwerty_holds {
             compatible = "zmk,behavior-hold-tap";
             label = "QWERTY_HOLDS";
@@ -192,6 +183,7 @@
             tapping-term-ms = <300>;
             flavor = "balanced";
             hold-trigger-key-positions = <13>;
+            require-prior-idle-ms = <150>;
         };
     };
 
@@ -234,7 +226,7 @@
 &none      &kp F1            &kp F2             &kp F3             &kp F4             &kp F5                                                              &kp F6     &kp F7     &kp F8          &kp F9            &kp F10            &kp F11
 &kp GRAVE  &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR         &kp PRCNT                                                           &kp CARET  &kp AMPS   &kp ASTRK       &kp LPAR          &kp RPAR           &kp TILDE
 &trans     &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(LS(LC(NUMBER_4)))    &kp LG(RIGHT_BRACKET)  &trans     &kp MINUS  &mt PLUS EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE
-                                                &trans             &trans             &trans           &trans                      &trans                 &trans     &trans     &mo 3
+                                                &trans             &trans             &trans           &trans                      &trans                 &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -255,7 +247,7 @@
 &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6          &kp N7          &kp N8     &kp N9           &kp N0    &kp GRAVE
 &trans     &trans  &trans  &trans  &trans  &trans                    &kp LEFT_ARROW  &qwerty_holds LA(LG(DOWN_ARROW)) DOWN_ARROW  &qwerty_holds LA(LG(UP_ARROW)) UP_ARROW     &kp RIGHT_ARROW  &trans    &kp NON_US_BACKSLASH
 &trans     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_PLUS     &kp MINUS       &kp EQUAL  &kp LBKT         &kp RBKT  &trans
-                           &trans  &trans  &trans  &trans    &trans  &trans          &trans          &mo 3
+                           &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
